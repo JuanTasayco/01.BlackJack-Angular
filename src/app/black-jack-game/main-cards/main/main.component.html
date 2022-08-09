@@ -1,0 +1,26 @@
+<div class="Container container-fluid">
+    <div class="Container-buttons d-flex justify-content-center">
+        <button class="Container-buttons-action btn btn-dark mx-2" [disabled]="buttonObtenerCarta" (click)="obtenerCarta()">Obtener Carta</button>
+        <button class="Container-buttons-action btn btn-dark mx-2" [disabled]="buttonDetenerJuego" (click)="detenerJuego()">Detener</button>
+        <button class="Container-buttons-action btn btn-dark mx-2" [disabled]="buttonNuevoJuego" (click)="nuevoJuego()">New Game</button>
+    </div>
+
+    <div class="Container-instructions d-flex justify-content-center my-3 " *ngIf="puntajeObtenido<1">
+        <div class="Container-toast shadow-lg border rounded-3 p-3">
+            <div class="Container-toast-header toast-header">
+                <strong class="Container-toast-title me-auto">Instrucciones</strong>
+            </div>
+            <div class="Conntainer-toast-body toast-body">
+            <p class="Container-toast-text text-start">Recuerda que, el que obtiene más de 21 puntos pierde</p>
+                <p>Si alguno de ustedes no excede esa cantidad, gana el que tiene mayor puntuación</p>    
+            </div>
+        </div>
+    </div>
+
+    <div class="Container-jugador">
+        <app-cards [cartasObtenidas]="cartasObtenidas" [puntuacionObtenida]="puntajeObtenido"></app-cards>
+    </div>
+    <div class="Container-maquina">
+        <app-cards [cartasObtenidas]="cartasObtenidasMaquina" [puntuacionObtenida]="puntajeObtenidoMaquina"></app-cards>
+    </div>
+</div>

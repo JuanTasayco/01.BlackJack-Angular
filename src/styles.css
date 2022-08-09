@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+hmtl, body{
+    margin: 0px;
+    background-color:#2F4F30 !important;
+    color:white !important;
+}
+
+
+.titulo{
+
+    text-align: center;
+    background:black;
+    padding:20px;
+    font-size:20px;
+
+}
+
+
+

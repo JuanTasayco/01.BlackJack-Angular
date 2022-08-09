@@ -1,0 +1,9 @@
+<p class="display-5 fs-3 text-center mt-3">Puntuacion Player 1: <b>{{puntuacion}}</b></p>
+<div class="row container-cards mt-3 p-5 ">
+    <div class="col-12 d-flex justify-content-center p-2 mb-3 divcartas" *ngIf="cartasObtenidas">
+    <img [src]="cartas | imagen" class="img-fluid player1__card img-cartas" *ngFor="let cartas of cartasObtenidas"> 
+    </div>
+
+
+
+</div>
