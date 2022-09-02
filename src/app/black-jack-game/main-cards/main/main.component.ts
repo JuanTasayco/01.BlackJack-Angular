@@ -73,7 +73,6 @@ export class MainComponent {
   }
 
   validacionObtenerCarta(puntaje1: number, puntaje2: number) {
-
     if (puntaje1 > 21 || puntaje1 == 21) {
       this.asignarEstadoBotones(true, true, false)
       puntaje2 = this.detenerJuego();
